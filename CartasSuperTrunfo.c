@@ -1,42 +1,65 @@
-#include <stdio.h>
+#include <stdio.h>  
+#include <string.h>
 
 int main() { 
-    int populacao, pontos_turisticos, ddd;
-    float area, pib;
-    char Cidade1[50], Cidade2[50], Cidade3[50], Cidade4[50];
+    int populacao1, populacao2, num_pontos_turisticos1, num_pontos_turisticos2, ddd1 , ddd2;
+    float pib1, pib2, area1, area2;
+    char Estado1[50], Estado2[50], Cidade1[50], Cidade2[50];
     
-    // Cidade 1
-    printf("--Rio de Janeiro--\n");
-    printf("DDD: 21\n");
-    printf("Pontos turisticos: Cristo Redentor, Pao de Acucar, Copacabana\n");
-    printf("Populacao: 6.7 milhoes\n");
-    printf("Area: 1.200 km²\n");
-    printf("PIB: R$ 300 bilhoes\n\n");
+    // Entrada de Dados
+    printf("--- Dados da Cidade 1 ---\n");
+    printf("Digite o 1 nome do Estado:\n");
+    fgets(Estado1, sizeof(Estado1), stdin);
+    Estado1[strcspn(Estado1, "\n")] = '\0';
+    printf("Digite o 1 nome da Cidade :\n");
+    fgets(Cidade1, sizeof(Cidade1), stdin);
+    Cidade1[strcspn(Cidade1, "\n")] = '\0';
+    printf("Digite o DDD:\n");
+    scanf("%d", &ddd1);
+    printf("Digite os pontos turisticos:\n");
+    scanf("%d", &num_pontos_turisticos1);
+    printf("Digite a populacao:\n");
+    scanf("%d", &populacao1);
+    printf("Digite a area:\n");
+    scanf("%f", &area1);
+    printf("Digite o PIB em reais:\n");
+    scanf("%f", &pib1);
 
-    // Cidade 2
-    printf("--Sao Paulo--\n");
-    printf("DDD: 11\n");
-    printf("Pontos turisticos: Avenida Paulista, Parque Ibirapuera, Mercado Municipal\n");
-    printf("Populacao: 12.3 milhoes\n");
-    printf("Area: 1.521 km²\n");
-    printf("PIB: R$ 700 bilhoes\n\n");
+    printf("\n--- Dados da Cidade 2 ---\n");
+    printf("Digite o 2 nome do Estado:\n");
+    getchar();
+    fgets(Estado2, sizeof(Estado2), stdin);
+    Estado2[strcspn(Estado2, "\n")] = '\0';
+    printf("Digite o 2 nome da Cidade :\n");
+    fgets(Cidade2, sizeof(Cidade2), stdin);
+    Cidade2[strcspn(Cidade2, "\n")] = '\0';
+    printf("Digite o DDD:\n");
+    scanf("%d", &ddd2);
+    printf("Digite os pontos turisticos:\n");
+    scanf("%d", &num_pontos_turisticos2);
+    printf("Digite a populacao:\n");
+    scanf("%d", &populacao2);
+    printf("Digite a area:\n");
+    scanf("%f", &area2);
+    printf("Digite o PIB em reais:\n");
+    scanf("%f", &pib2);
 
-    // Cidade 3
-    printf("--Salvador--\n");
-    printf("DDD: 71\n");
-    printf("Pontos turisticos: Pelourinho, Elevador Lacerda, Praia do Forte\n");
-    printf("Populacao: 2.9 milhoes\n");
-    printf("Area: 706 km²\n");
-    printf("PIB: R$ 150 bilhoes\n\n");
+    printf("\nCarta 1:\n");
+    printf("Estado: %s\n", Estado1);
+    printf("Cidade: %s\n", Cidade1);
+    printf("DDD: %d\n", ddd1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Pontos turísticos: %d\n", num_pontos_turisticos1);
 
-    // Cidade 4
-    printf("--Brasilia--\n");
-    printf("DDD: 61\n");
-    printf("Pontos turisticos: Congresso Nacional, Catedral Metropolitana, Palácio da Alvorada\n");
-    printf("Populacao: 3 milhoes\n");
-    printf("Area: 5.802 km²\n");
-    printf("PIB: R$ 250 bilhoes\n\n"); 
-    
-return 0;
-
+    printf("\nCarta 2:\n");
+    printf("Estado: %s\n", Estado2);
+    printf("Cidade: %s\n", Cidade2);
+    printf("DDD: %d\n", ddd2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos turísticos: %d\n", num_pontos_turisticos2);
+    return 0;
 }
